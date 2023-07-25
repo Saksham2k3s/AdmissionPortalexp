@@ -1,0 +1,40 @@
+<%- include('../header.ejs') %>
+
+<h1 class="text-center heading mt-5 pt-5">All Course Display</h1>
+
+<div class="container-fluid mt-5 pt-5">
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">S.No</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">phone</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Course</th>
+           
+           
+            <th class="text-center">Action</th>
+              </tr>
+              <% i=1 %>
+         <% d.forEach((item)=>{ %>
+            <tr>
+                <td><%= i++ %></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.phoneno %></td>
+                <td><%= item.status %></td>
+                <td><%= item.course %></td>
+               
+              
+              
+                <td class="login">
+                    <a href="/admin/course/view/<%= item._id %>" class=""><span class="  btn btn-primary">Profile</span></a>
+                   
+                    <!-- <a href="/edit/<%= item._id %>" class="btn btn-success">Edit</a> -->
+                    <a href="/admin/course/delete/<%= item._id %>" class="btn btn-primary mt-3">Delete Account</a>
+                </td>
+            </tr>
+      <%   }) %>
+       
+    </table>
+</div>

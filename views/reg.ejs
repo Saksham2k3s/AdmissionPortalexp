@@ -1,0 +1,123 @@
+<%- include('./header2.ejs') %>
+<div class="container-fluid  mt-5 pt-5">
+
+</div>
+  <div class="container reg pt-5">
+    <h2 class="text-center">Registration Form</h2>
+    <% if(message.length > 0){ %>
+      <div class="alert-danger text-center">
+      <h5><%= message %></h5>
+      </div>
+    <% } %>
+    <form action="/userinsert" method="post" enctype="multipart/form-data">
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              placeholder="Enter your name"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="email">DOB</label>
+            <input
+              type="date"
+              class="form-control"
+              name="dob"
+              placeholder="Enter your Age"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <i class="fa-solid fa-building-columns"></i> <label for="name">University/College</label>
+            <input
+              type="text"
+              class="form-control"
+              name="clgname"
+              placeholder="University/College Name"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <i class="fa-solid fa-location-dot"></i> <label for="name">City</label>
+           <input
+              type="text"
+              class="form-control"
+              name="cityname"
+              placeholder="City Name"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <i class="fa-solid fa-mobile"></i> <label for="name">Contact No</label>
+            <input
+              type="text"
+              class="form-control"
+              name="phoneno"
+              placeholder="Contact Number"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <i class="fa-solid fa-certificate"></i> <label for="exampleFormControlFile1">Choose profile picture</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Enter your password"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="password">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="confirm_password"
+              placeholder="Enter your password"
+            />
+          </div>
+        </div>
+      
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-25">Register</button>
+      </div>
+    </form>
+    <div class="text-center">Already ragisterd <a href="/">Login</a> </div>
+  </div>
+  
+  <%- include('./footer.ejs') %>

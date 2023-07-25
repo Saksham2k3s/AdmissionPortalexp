@@ -1,0 +1,63 @@
+<%- include('../header.ejs') %>
+ 
+
+
+  <div class="mt-5  pt-5">
+    <h1 class="text-center mt-5 ">User Profile</h1>
+
+
+
+ <!--Profile section-->
+<div class="container-fluid">
+  <div class="container">
+    <div class="profile-img text-center">
+      <img src="<%= u.image.url %>" alt="profile image" class="img-fluid">
+    </div>
+    <div class="row pro-detail  mt-5">
+      <div class="col-md-4 ">
+        <h3>Name: <span><%= u.name %></span></h3>
+      </div>
+      <div class="col-md-4">
+        <h3>Email: <span><%= u.email %></span></h3>
+      </div>
+      <div class="col-md-4">
+        <h3>DOB: <span><%= u.dob %></span></h3>
+      </div>
+    </div>
+    <div class="row pro-detail mt-3">
+      <div class="col-md-4">
+        <h3><i class="fa-solid fa-building-columns"></i> </h3>
+        <h3>University/College: <span><%= u.clgname %></span></h3>
+      </div>
+      <div class="col-md-4">
+        <h3> <i class="fa-solid fa-location-dot"></i></h3>
+        <h3>City: <span><%= u.cityname %></span></h3>
+      </div>
+      <div class="col-md-4">
+        <h3 class=""> <i class="fa-solid fa-mobile"></i></h3>
+        <h3>Contact: <span><%= u.phoneno %></span></h3>
+      </div>
+    </div>
+    <div class="row pro-detail mt-4">
+    <div class="col-md-4">
+      <h3>Course : <span><%= d.course %></span></h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Role : <span><%= u.role %></span></h3>
+    </div>
+    </div>
+   <div class="row mt-5 login">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 mt-3">
+    <a href="/deleteuser/<%= u._id %>">    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#cpassword">Delete User Account
+    </button></a>
+   </div>
+   <div class="col-md-4"></div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

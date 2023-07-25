@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@700&display=swap');
+   .navbar{
+      background-color: #fff;
+   }
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   .nav-brand img{
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+   }
+
+   .nav-link{
+    font-size: 25px;
+    font-weight: bold;
+   }
+   .nav-link:hover{
+    font-size: 25px;
+    font-weight: bold;
+    color: #0606aa !important;
+   }
+  .containerbox {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0606aa;
+  }
+  .container h2{
+    color: #0606aa;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+ .login .form-group {
+    margin-bottom: 20px;
+    color: #0606aa;
+  }
+
+.login  .form-control {
+    border-radius: 5px;
+    color: #0606aa;
+  }
+
+  .form-group input{
+    border: 2px solid #0606aa;
+    color: #0606aa;
+  }
+
+ .login .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0606aa !important;
+  }
+
+  .reg .form-group {
+    margin-bottom: 20px;
+    color: #0606aa;
+  }
+
+.reg  .form-control {
+    border-radius: 5px;
+    color: #0606aa;
+  }
+
+ .reg .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0606aa !important;
+  }
+  .reg label{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .reg i{
+    font-size: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+  nav .btn-primary{
+    background-color: #0606aa !important;
+  }
+  .card{
+    background-color: #90c8ff;
+    border: 2px solid #0606aa;
+  }
+  .card img{
+    height: 300px !important;
+  }
+  .heading{
+    color: #0606aa;
+    text-decoration: underline;
+  }
+  table{
+    border: 2px solid black;
+  }
+
+  .home .container-fluid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: white;
+}
+.home .p {
+    font-size: 30px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 20px;
+}
+.home .highlight {
+    color: #f7f7f7;
+}
+.home .list-container {
+    text-align: left;
+    margin-bottom: 30px;
+}
+.home .list-container ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+.home button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7474dc;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.home .button:hover {
+    background-color: #0606aa;
+}
+
+/* home page */
+
+.banner1{
+  background: linear-gradient(rgba(0,0,0,0.64),rgba(0,0,0,0.64)),url(https://img.freepik.com/free-vector/abstract-mesh-background-futuristic-technology-style-card-lines-point-planes-3d-space_1217-3865.jpg?size=626&ext=jpg&ga=GA1.1.1802003475.1686590369&semt=ais);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 7.5rem;
+  font-family: 'Lunasima', sans-serif;
+  text-align: center;
+
+}
+
+.carousel-item .btn{
+  background-color: white;
+  font-size: 20px;
+  color: black;
+  transition: 2s;
+}
+
+.carousel-item .btn:hover{
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
+  border: 3px solid white;
+  transition: 2s;
+}
+
+.thick-underline {
+  position: relative;
+
+}
+
+.thick-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 50px;
+  height: 4px;
+  background-color: #0606aa;
+  transform: translateX(-50%);
+}
+
+.heading2{
+  color: #7474dc;
+  font-family: 'Lunasima', sans-serif;
+}
+
+.para{
+  height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: justify;
+  font-size: 15px;
+  color: #0606aa;
+  font-weight: bold;
+}
+
+
+/* scroll bar styling */
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 50%;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0606aa;
+  border-radius: 50px;
+  height: 10px;
+  width: 10px;
+}
+
+/* Handle on hover */
+
+
+.course{
+  box-shadow: 0px 3px 34px gray;
+  border-radius: 10px;
+}
+.course img{
+  height: 100px;
+  width: 100px;
+}
+.course h1{
+  font-family: 'Lunasima', sans-serif;
+}
+.coursepg img{
+  width: 50%;
+  height: 50%;
+}
+.coursepg .btn-primary{
+  
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #0606aa !important;
+  
+}
+
+/* profile section */
+.profile-img{
+ align-items: center;
+ border-radius: 50%;
+
+ 
+}
+.profile-img img{
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: 3px solid #0606aa;
+}
+.pro-detail h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #0606aa;
+  font-weight: bold;
+}
+.pro-detail span{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #0606aa;
+  font-weight: 100;
+ 
+  
+}
+
+footer{
+  background: #7e7e9f;
+  color: #fff;
+  padding: 50px;
+  font-size: 30px;
+ }
+ footer .img{
+   margin-top: 40px;
+   margin-bottom: 80px;
+   height: 230px;
+   
+ }
+
+ footer .i{
+  font-size: 40px;
+  color: #0606aa;
+  margin: 6px;
+  cursor: pointer;
+} 

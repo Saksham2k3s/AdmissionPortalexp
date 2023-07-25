@@ -1,0 +1,35 @@
+<%- include('../header.ejs') %>
+<br>
+<br>
+<h1 class="text-center heading mt-5 pt-5">display course</h1>
+
+<div class="container-fluid mt-5 pt-5 login">
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">S.No</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">phone</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Course</th>
+            <th class="text-center">Action</th>
+              </tr>
+              <% i=1 %>
+         <% d.forEach((item)=>{ %>
+            <tr>
+                <td><%= i++ %></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.phoneno %></td>
+                <td><%= item.status %></td>
+                <td><%= item.course %></td>
+                <td>
+                   
+                    <a href="/delete/<%= item._id %>" class="btn btn-primary">Delete</a>
+                </td>
+            </tr>
+      <%   }) %>
+       
+    </table>
+</div>
+<%- include('./footer.ejs') %>

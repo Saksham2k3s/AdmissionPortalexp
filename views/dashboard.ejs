@@ -1,0 +1,323 @@
+<%- include('./header.ejs') %>
+
+
+  
+<div class="container-fluid mt-5 pt-5">
+  <h1 class="h1 thick-underline text-center mt-5 pt-3 heading2" >
+    Our Courses
+  </h1>
+  
+  <h2 class="text-center heading mt-3 h4">Select the Course Which you want to do</h2>
+ <div class="container coursepg">
+  <div class="row mt-5">
+    <div class="col-md-6 text-center">
+    <img src="https://cdn-icons-png.flaticon.com/128/9831/9831292.png" alt="machine learning" class="img-fluid" >
+    </div>
+    <div class="col-md-6 text-center">
+      <h1 class="h1">Machine Learning</h1>
+      <h3 class="h3">Duration: 6 months</h3>
+      <h5 class="h5">Fee: 7000</h5>
+      <% if(ml){  %>
+        <a href="/coursedisplay" class="btn btn-primary">Registered</a>
+    <% } else{ %>
+    
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ML">Register</button>
+     <% } %>
+    </div>
+  </div>
+  <div class="row mt-5">
+   
+    <div class="col-md-6 text-center order-2 order-lg-1">
+      <h1 class="h1">Java</h1>
+      <h3 class="h3">Duration: 4 months</h3>
+      <h5 class="h5">Fee: 5000</h5>
+      <% if(java){  %>
+        <a href="/coursedisplay" class="btn btn-primary">Registered</a>
+    <% } else{ %>
+    
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#java">Register</button>
+     <% } %>
+    </div>
+    <div class="col-md-6 text-center order-1 order-lg-2">
+      <img src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png" alt="machine learning" class="img-fluid" >
+      </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6 text-center">
+    <img src="https://cdn-icons-png.flaticon.com/128/1042/1042009.png" alt="machine learning" class="img-fluid" >
+    </div>
+    <div class="col-md-6 text-center">
+      <h1 class="h1">Data Structure</h1>
+      <h3 class="h3">Duration: 6 months</h3>
+      <h5 class="h5">Fee: 8000</h5>
+      <% if(DSA){  %>
+        <a href="/coursedisplay" class="btn btn-primary">Registered</a>
+    <% } else{ %>
+    
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DSA">Register</button>
+     <% } %>
+    </div>
+  </div>
+  <div class="row mt-5">
+   
+    <div class="col-md-6 text-center order-2 order-lg-1">
+      <h1 class="h1">Web Development</h1>
+      <h3 class="h3">Duration: 5 months</h3>
+      <h5 class="h5">Fee: 10000</h5>
+      <% if(wd){  %>
+        <a href="/coursedisplay" class="btn btn-primary">Registered</a>
+    <% } else{ %>
+    
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#wd">Register</button>
+     <% } %>
+    </div>
+    <div class="col-md-6 text-center order-1 order-lg-2">
+      <img src="https://cdn-icons-png.flaticon.com/128/7991/7991055.png" alt="machine learning" class="img-fluid" >
+      </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6 text-center">
+    <img src="https://cdn-icons-png.flaticon.com/128/2779/2779775.png" alt="machine learning" class="img-fluid" >
+    </div>
+    <div class="col-md-6 text-center">
+      <h1 class="h1">Graphic Designing</h1>
+      <h3 class="h3">Duration: 6 months</h3>
+      <h5 class="h5">Fee: 8000</h5>
+      <% if(gd){  %>
+        <a href="/coursedisplay" class="btn btn-primary">Registered</a>
+    <% } else{ %>
+    
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gd">Register</button>
+     <% } %>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+
+<!-- ML Modal code-->
+
+<div class="modal fade" id="ML" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title heading" id="exampleModalLabel">Ragistration Form</h5>
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      <span  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+    </div>
+    <div class="modal-body">
+   <form action="/courseInsert" method="post">
+    <div class="mb-3">
+      <label for="" >Name</label>
+      <input type="text" name="name" value="<%= n %>" class="form-control"required>
+      </div>
+      <div class="mb-3">
+      <label for="" >Email</label>
+      <input type="email" name="email" value="<%= e %>" class="form-control"required>
+    </div>
+    <div class="mb-3">
+      <label for="" >phone no</label>
+      <input type="number" name="phoneno" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="" >10th marks</label>
+      <input type="number" name="tenth" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="" >12th marks</label>
+      <input type="number" name="tweleth" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="" >Course</label>
+      <input type="text" name="course" value="machine learning" class="form-control" readonly required >
+    </div>
+    <button type="submit" class="btn btn-primary">submit</button>
+    </div>
+   </form>
+    </div>
+   
+  </div>
+</div>
+
+
+
+<!-- java Modal code-->
+
+<div class="modal fade" id="java" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title heading" id="exampleModalLabel">Ragistration Form</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <span  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+      </div>
+      <div class="modal-body">
+     <form action="/courseInsert" method="post">
+      <div class="mb-3">
+        <label for="" >Name</label>
+        <input type="text" name="name" value="<%= n %>" class="form-control"required>
+        </div>
+        <div class="mb-3">
+        <label for="" >Email</label>
+        <input type="email" name="email" value="<%= e %>" class="form-control"required>
+      </div>
+      <div class="mb-3">
+        <label for="" >phone no</label>
+        <input type="number" name="phoneno" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >10th marks</label>
+        <input type="number" name="tenth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >12th marks</label>
+        <input type="number" name="tweleth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >Course</label>
+        <input type="text" name="course" value="java" class="form-control" readonly required >
+      </div>
+      <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+     </form>
+      </div>
+     
+    </div>
+  </div>
+
+
+  
+<!-- DSA Modal code-->
+
+<div class="modal fade" id="DSA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title heading" id="exampleModalLabel">Ragistration Form</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <span  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+      </div>
+      <div class="modal-body">
+     <form action="/courseInsert" method="post">
+      <div class="mb-3">
+        <label for="" >Name</label>
+        <input type="text" name="name" value="<%= n %>" class="form-control"required>
+        </div>
+        <div class="mb-3">
+        <label for="" >Email</label>
+        <input type="email" name="email" value="<%= e %>" class="form-control"required>
+      </div>
+      <div class="mb-3">
+        <label for="" >phone no</label>
+        <input type="number" name="phoneno" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >10th marks</label>
+        <input type="number" name="tenth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >12th marks</label>
+        <input type="number" name="tweleth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >Course</label>
+        <input type="text" name="course" value="Data Structures" class="form-control" readonly required >
+      </div>
+      <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+     </form>
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- web Modal code-->
+
+<div class="modal fade" id="wd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title heading" id="exampleModalLabel">Ragistration Form</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <span  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+      </div>
+      <div class="modal-body">
+     <form action="/courseInsert" method="post">
+      <div class="mb-3">
+        <label for="" >Name</label>
+        <input type="text" name="name" value="<%= n %>" class="form-control"required>
+        </div>
+        <div class="mb-3">
+        <label for="" >Email</label>
+        <input type="email" name="email" value="<%= e %>" class="form-control"required>
+      </div>
+      <div class="mb-3">
+        <label for="" >phone no</label>
+        <input type="number" name="phoneno" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >10th marks</label>
+        <input type="number" name="tenth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >12th marks</label>
+        <input type="number" name="tweleth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >Course</label>
+        <input type="text" name="course" value="Web Development" class="form-control" readonly required >
+      </div>
+      <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+     </form>
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- graphic designing Modal code-->
+
+<div class="modal fade" id="gd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title heading" id="exampleModalLabel">Ragistration Form</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <span  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+      </div>
+      <div class="modal-body">
+     <form action="/courseInsert" method="post">
+      <div class="mb-3">
+        <label for="" >Name</label>
+        <input type="text" name="name" value="<%= n %>" class="form-control"required>
+        </div>
+        <div class="mb-3">
+        <label for="" >Email</label>
+        <input type="email" name="email" value="<%= e %>" class="form-control"required>
+      </div>
+      <div class="mb-3">
+        <label for="" >phone no</label>
+        <input type="number" name="phoneno" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >10th marks</label>
+        <input type="number" name="tenth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >12th marks</label>
+        <input type="number" name="tweleth" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="" >Course</label>
+        <input type="text" name="course" value="Graphic Designing" class="form-control" readonly required >
+      </div>
+      <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+     </form>
+      </div>
+     
+    </div>
+  </div>
+
+  <%- include('./footer.ejs') %>
